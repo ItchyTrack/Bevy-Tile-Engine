@@ -1,0 +1,39 @@
+[workspace]
+resolver = "3"
+
+members = [
+	"crates/scene",
+	"crates/tile-sources",
+	"crates/voxel-data",
+	"crates/tile-data",
+]
+
+default-members = [
+	"crates/voxel-app",
+]
+
+[profile.release]
+debug = true
+
+[workspace.dependencies]
+bevy = "0.19"
+bevy_ecs = "0.19"
+crossbeam-channel = "0.5.15"
+wgpu = "29.0.3"
+log = "0.4"
+num = "0.4.3"
+bytemuck = { version = "1.24", features = ["derive"] }
+bitflags = "2.13"
+tracy-client = { version = "0.18.4", default-features = false }
+rustc-hash = "2.1.2"
+tokio = "1"
+futures = "0.3.32"
+scene = { version = "0.1.0", path = "crates/scene" }
+tile-sources = { version = "0.1.0", path = "crates/tile-sources" }
+voxel-data = { version = "0.1.0", path = "crates/voxel-data" }
+tile-data = { version = "0.1.0", path = "crates/tile-data" }
+
+[workspace.lints.clippy]
+type_complexity = "allow"
+too_many_arguments = "allow"
+collapsible_if = "allow"
