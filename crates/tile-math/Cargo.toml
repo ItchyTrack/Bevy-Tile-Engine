@@ -1,5 +1,5 @@
 [package]
-name = "vge-math"
+name = "tile-math"
 version = "0.1.0"
 edition = "2024"
 

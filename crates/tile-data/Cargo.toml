@@ -9,8 +9,6 @@ rustc-hash = { workspace = true }
 async-trait = "0.1.89"
 serde = { version = "1", features = ["derive"] }
 tile-math = { workspace = true }
-voxel-trees = { workspace = true }
-voxel-data = { workspace = true }
 
 [lints]
 workspace = true

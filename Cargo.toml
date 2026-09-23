@@ -2,14 +2,16 @@
 resolver = "3"
 
 members = [
+	"crates/tile-math",
 	"crates/scene",
+	"crates/scene-source",
 	"crates/tile-sources",
-	"crates/voxel-data",
 	"crates/tile-data",
+	"crates/demo-app",
 ]
 
 default-members = [
-	"crates/voxel-app",
+	"crates/demo-app",
 ]
 
 [profile.release]
@@ -28,9 +30,10 @@ tracy-client = { version = "0.18.4", default-features = false }
 rustc-hash = "2.1.2"
 tokio = "1"
 futures = "0.3.32"
+tile-math = { version = "0.1.0", path = "crates/tile-math" }
 scene = { version = "0.1.0", path = "crates/scene" }
+scene-source = { version = "0.1.0", path = "crates/scene-source" }
 tile-sources = { version = "0.1.0", path = "crates/tile-sources" }
-voxel-data = { version = "0.1.0", path = "crates/voxel-data" }
 tile-data = { version = "0.1.0", path = "crates/tile-data" }
 
 [workspace.lints.clippy]

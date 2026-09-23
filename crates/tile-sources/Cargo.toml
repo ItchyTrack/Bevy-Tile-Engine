@@ -8,8 +8,8 @@ default = []
 gpu_profiling = []
 
 [dependencies]
-vge-math = { workspace = true }
 bevy = { workspace = true }
+tile-math = { workspace = true }
 
 [lints]
 workspace = true
