@@ -2,12 +2,9 @@ use std::{future::Future, sync::Arc};
 
 use bevy::prelude::*;
 use rustc_hash::FxHashMap;
-use voxel_data::{
-	grid::GridId,
-	voxels::{VoxelTypeId, Voxels},
-};
 
-use crate::{NonZeroChunkRegion, TileClassId, TileData, TileBuildingParameters, TileKey, class::TileBuildingData};
+use crate::{TileClassId, TileData, TileBuildingParameters, TileKey, class::TileBuildingData};
+use tile_math::region::NonZeroRegion;
 
 pub use async_trait::async_trait;
 
@@ -33,14 +30,14 @@ impl TileBuilderRegistry {
 
 #[derive(Clone, Copy, Debug, PartialEq, Eq, Hash)]
 pub struct VoxelRegionRequest {
-	pub area: NonZeroChunkRegion,
+	pub area: NonZeroRegion,
 	pub lod: u8,
 	pub voxel_type: Option<VoxelTypeId>,
 }
 
 #[derive(Debug)]
 pub struct VoxelRegionResult {
-	pub area: NonZeroChunkRegion,
+	pub area: NonZeroRegion,
 	pub lod: u8,
 	pub voxels: Voxels,
 }
