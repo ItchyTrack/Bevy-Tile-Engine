@@ -2,16 +2,16 @@
 resolver = "3"
 
 members = [
-	"crates/tile-math",
-	"crates/scene",
-	"crates/scene-source",
-	"crates/tile-sources",
-	"crates/tile-data",
-	"crates/demo-app",
+	"crates/bile-math",
+	"crates/bile-scene",
+	"crates/bile-scene-source",
+	"crates/bile-tile-sources",
+	"crates/bile-tiles",
+	"crates/bile-demo-app",
 ]
 
 default-members = [
-	"crates/demo-app",
+	"crates/bile-demo-app",
 ]
 
 [profile.release]
@@ -30,11 +30,12 @@ tracy-client = { version = "0.18.4", default-features = false }
 rustc-hash = "2.1.2"
 tokio = "1"
 futures = "0.3.32"
-tile-math = { version = "0.1.0", path = "crates/tile-math" }
-scene = { version = "0.1.0", path = "crates/scene" }
-scene-source = { version = "0.1.0", path = "crates/scene-source" }
-tile-sources = { version = "0.1.0", path = "crates/tile-sources" }
-tile-data = { version = "0.1.0", path = "crates/tile-data" }
+bile-math = { version = "0.1.0", path = "crates/bile-math" }
+bile-scene = { version = "0.1.0", path = "crates/bile-scene" }
+bile-scene-source = { version = "0.1.0", path = "crates/bile-scene-source" }
+bile-tiles = { version = "0.1.0", path = "crates/bile-tiles" }
+bile-tile-sources = { version = "0.1.0", path = "crates/bile-tile-sources" }
+bile = { version = "0.1.0", path = "crates/bile" }
 
 [workspace.lints.clippy]
 type_complexity = "allow"

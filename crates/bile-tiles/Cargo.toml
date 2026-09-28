@@ -1,0 +1,14 @@
+[package]
+name = "bile-tiles"
+version = "0.1.0"
+edition = "2024"
+
+[dependencies]
+bevy = { workspace = true }
+rustc-hash = { workspace = true }
+async-trait = "0.1.89"
+serde = { version = "1", features = ["derive"] }
+bile-math = { workspace = true }
+
+[lints]
+workspace = true

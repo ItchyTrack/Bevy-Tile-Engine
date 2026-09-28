@@ -1,0 +1,19 @@
+[package]
+name = "bile"
+version = "0.1.0"
+edition = "2024"
+
+[features]
+default = []
+gpu_profiling = []
+
+[dependencies]
+bevy = { workspace = true }
+bile-math = { workspace = true }
+bile-scene = { workspace = true }
+bile-scene-sources = { workspace = true }
+bile-tiles = { workspace = true }
+bile-tile-sources = { workspace = true }
+
+[lints]
+workspace = true
