@@ -1,16 +1,15 @@
-use bevy::math::{IVec3, UVec3};
+use bevy::{ecs::component::Component, math::{IVec3, UVec3}};
 
 use bile_math::region::NonZeroRegion;
-use crate::TileClassId;
 
-#[derive(Clone, Copy, Debug, PartialEq, Eq, Hash)]
+#[derive(Component, Clone, Copy, Debug, PartialEq, Eq, Hash)]
 pub struct TileKey {
 	pub region: NonZeroRegion,
 	pub lod: u8,
 }
 
 impl TileKey {
-	pub fn new(region: NonZeroRegion, lod: u8, class: TileClassId) -> Self {
+	pub fn new(region: NonZeroRegion, lod: u8) -> Self {
 		Self { region, lod }
 	}
 
